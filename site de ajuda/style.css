@@ -1,0 +1,287 @@
+/* RESET E CONFIGURAÇÕES BASE */
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+:focus {
+    outline: 4px solid #ffbf47 !important;
+    outline-offset: 2px !important;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* BARRA SUPERIOR */
+.top-bar {
+    background-color: #1f3a60;
+    color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 3px solid #ffbf47;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.accessibility-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.accessibility-controls button {
+    background-color: #ffffff;
+    color: #1f3a60;
+    border: 2px solid #ffffff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.accessibility-controls button:hover {
+    background-color: #ffbf47;
+    color: #000000;
+}
+
+/* HERO SECTION E BOTÃO DE AJUDA */
+.hero-section {
+    background-color: #e8f4f8;
+    padding: 40px 0;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+}
+
+.hero-section h1 {
+    font-size: 2.2rem;
+    color: #0f2b48;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+}
+
+/* Botão de Ajuda Chamativo */
+.btn-help {
+    background-color: #d9534f;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 20px 30px;
+    border: 3px solid #b52b27;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+}
+
+.btn-help:hover {
+    background-color: #c9302c;
+    transform: scale(1.03);
+}
+
+/* Painel de Emergência de Ajuda */
+.help-panel {
+    background-color: #fff3cd;
+    border: 4px solid #ffc107;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.help-panel h2 {
+    color: #856404;
+    margin-top: 0;
+    border: none;
+    padding: 0;
+}
+
+.help-panel ol {
+    font-size: 1.3rem;
+    padding-left: 20px;
+}
+
+.help-panel li {
+    margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn-secondary {
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* SEÇÕES E CARDS */
+.content-section {
+    padding: 40px 0;
+}
+
+.gray-bg {
+    background-color: #f4f4f4;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #0f2b48;
+    margin-bottom: 25px;
+    border-left: 6px solid #0066cc;
+    padding-left: 10px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-top: 0;
+    color: #1f3a60;
+}
+
+.card p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+.checklist li {
+    background: #ffffff;
+    border-left: 5px solid #d9534f;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-left: 5px solid #d9534f;
+    border-radius: 4px;
+}
+
+.checklist strong {
+    font-size: 1.2rem;
+    color: #a94442;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.checklist p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.action-box {
+    background-color: #fff8e1;
+    border: 2px solid #ffe082;
+    padding: 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #1f3a60;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* MODO ALTO CONTRASTE */
+body.high-contrast {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+}
+
+body.high-contrast .top-bar,
+body.high-contrast footer {
+    background-color: #000000 !important;
+    border-color: #ffff00 !important;
+}
+
+body.high-contrast .logo,
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast strong {
+    color: #ffff00 !important;
+}
+
+body.high-contrast .hero-section,
+body.high-contrast .gray-bg,
+body.high-contrast .card,
+body.high-contrast .checklist li,
+body.high-contrast .action-box,
+body.high-contrast .help-panel {
+    background-color: #121212 !important;
+    border-color: #ffff00 !important;
+    color: #ffffff !important;
+}
+
+body.high-contrast button {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Segurança Digital para Todos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Atalho para leitores de tela -->
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <!-- Barra de Acessibilidade -->
+    <header class="top-bar" role="banner">
+        <div class="container top-bar-container">
+            <span class="logo">Segurança Digital Fácil</span>
+            
+            <div class="accessibility-controls" aria-label="Controles de Acessibilidade">
+                <button id="btn-increase-font" title="Aumentar o tamanho do texto" aria-label="Aumentar texto">A+</button>
+                <button id="btn-decrease-font" title="Diminuir o tamanho do texto" aria-label="Diminuir texto">A-</button>
+                <button id="btn-contrast" title="Alternar Modo de Alto Contraste" aria-label="Modo alto contraste"> Alto Contraste</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo-principal" tabindex="-1">
+        <!-- Banner Principal -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Aprenda a navegar na internet com segurança</h1>
+                <p>Descubra como identificar mensagens falsas, evitar golpes e proteger seus dados de forma simples.</p>
+
+                <!-- Botão de Ajuda Atualizado -->
+                <button id="btn-help" class="btn-help" onclick="pedirAjuda()" aria-label="Preciso de ajuda com uma mensagem suspeita">
+                    🆘 ACHEI ALGO SUSPEITO! PEDIR AJUDA
+                </button>
+
+                <!-- Painel de Emergência (invisível até ser acionado) -->
+                <div id="help-panel" class="help-panel hidden" role="alert" aria-live="assertive">
+                    <h2> Orientação Rápida de Segurança:</h2>
+                    <ol>
+                        <li><strong>PARE!</strong> Não responda a mensagem e não clique em nenhum link.</li>
+                        <li><strong>NÃO PAGUE:</strong> O banco nunca pede PIX nem senhas por WhatsApp.</li>
+                        <li><strong>PEÇA AJUDA:</strong> Mostre essa tela para um parente, vizinho ou amigo de confiança agora.</li>
+                    </ol>
+                    <button class="btn-secondary" onclick="fecharAjuda()">Entendi, fechar aviso</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 1: Dicas Rápidas -->
+        <section class="content-section" aria-labelledby="titulo-dicas">
+            <div class="container">
+                <h2 id="titulo-dicas">3 Regras de Ouro da Segurança</h2>
+                <div class="cards-grid">
+                    
+                    <article class="card">
+                        <h3>1. Desconfie de Urgência</h3>
+                        <p>Golpistas usam frases como <em>"Sua conta será bloqueada hoje!"</em>. Respire e não aja pelo impulso.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>2. Proteja suas Senhas</h3>
+                        <p>Bancos e empresas confiáveis <strong>nunca</strong> pedem sua senha ou código SMS por mensagem ou ligação.</p>
+                    </article>
+
+                    <article class="card">
+                        <h3>3. Cuidado com Links</h3>
+                        <p>Não clique em links enviados por desconhecidos no WhatsApp ou e-mail.</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Como identificar golpes comuns -->
+        <section class="content-section gray-bg" aria-labelledby="titulo-golpes">
+            <div class="container">
+                <h2 id="titulo-golpes">Como identificar mensagens falsas</h2>
+                
+                <ul class="checklist">
+                    <li>
+                        <strong>Verifique quem enviou:</strong>
+                        <p>Se a mensagem diz ser do seu banco, mas vem de um número comum, é golpe.</p>
+                    </li>
+                    <li>
+                        <strong>Erros de português:</strong>
+                        <p>Mensagens de golpistas costumam ter erros de digitação e palavras em maiúsculas.</p>
+                    </li>
+                    <li>
+                        <strong>Promessas de dinheiro fácil:</strong>
+                        <p>Prêmios de loteria ou auxílios do governo urgentes costumam ser armadilhas.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Seção 3: O que fazer se suspeitar de um golpe -->
+        <section class="content-section" aria-labelledby="titulo-ajuda">
+            <div class="container">
+                <h2 id="titulo-ajuda">O que fazer se estiver em dúvida?</h2>
+                <div class="action-box">
+                    <p><strong>Passo 1:</strong> Não clique em nada e não instale nenhum aplicativo recomendado.</p>
+                    <p><strong>Passo 2:</strong> Ligue para o número que está no verso do seu cartão bancário.</p>
+                    <p><strong>Passo 3:</strong> Em caso de perda de dinheiro, avise seu banco e faça um Boletim de Ocorrência.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer role="contentinfo">
+        <div class="container">
+            <p>Guia Acessível de Segurança Digital &copy; 2026. Feito para proteger você na internet.</p>
+        </div>
+    </footer>
+
+    <!-- Script de Acessibilidade e Ajuda -->
+    <script>
+        // Aumentar e Diminuir Fonte
+        let currentFontSize = 100;
+
+        document.getElementById('btn-increase-font').addEventListener('click', () => {
+            if (currentFontSize < 150) {
+                currentFontSize += 10;
+                document.documentElement.style.fontSize = currentFontSize + '%';
+            }
+        });
+
+        document.getElementById('btn-decrease-font').addEventListener('click', () => {
+            if (currentFontSize > 80) {
+                currentFontSize -= 10;
+                document.documentElement.style.fontSize = currentFontSize + '%';
+            }
+        });
+
+        // Alternar Alto Contraste
+        document.getElementById('btn-contrast').addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+        });
+
+        // Função do Botão de Ajuda Urgente
+        function pedirAjuda() {
+            const painel = document.getElementById('help-panel');
+            painel.classList.remove('hidden');
+
+            // Leitura em voz alta automática do alerta
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const avisoVoz = new SpeechSynthesisUtterance("Atenção! Se você recebeu uma mensagem suspeita: Pare e não clique em nada! Não faça transferências. Peça ajuda imediatamente a alguém de sua confiança.");
+                avisoVoz.lang = 'pt-BR';
+                avisoVoz.rate = 0.85; // Voz mais pausada para idosos
+                window.speechSynthesis.speak(avisoVoz);
+            }
+        }
+
+        function fecharAjuda() {
+            document.getElementById('help-panel').classList.add('hidden');
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+        }
+    </script>
+</body>
+</html>
